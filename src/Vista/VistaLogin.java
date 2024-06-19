@@ -1,5 +1,5 @@
 package Vista;
-
+//COMENTARIO ADICIONAL MARIO PAZ
 /**
  *
  * @author GrupoNo.4
