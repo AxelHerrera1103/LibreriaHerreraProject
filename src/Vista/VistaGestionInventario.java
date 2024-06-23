@@ -27,7 +27,6 @@ public class VistaGestionInventario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnIngresoProductos = new javax.swing.JButton();
-        btnSalidaProductos = new javax.swing.JButton();
         btnVenta = new javax.swing.JButton();
         btnActualizacionProductos = new javax.swing.JButton();
 
@@ -61,14 +60,6 @@ public class VistaGestionInventario extends javax.swing.JFrame {
         btnIngresoProductos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btnIngresoProductos.setText("INGRESO DE PRODUCTOS");
 
-        btnSalidaProductos.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        btnSalidaProductos.setText("SALIDA DE PRODUCTOS");
-        btnSalidaProductos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalidaProductosActionPerformed(evt);
-            }
-        });
-
         btnVenta.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         btnVenta.setText("VENTA");
 
@@ -80,26 +71,23 @@ public class VistaGestionInventario extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(200, 200, 200)
+                .addGap(214, 214, 214)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalidaProductos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnIngresoProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnActualizacionProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(239, 239, 239))
+                .addGap(225, 225, 225))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addGap(111, 111, 111)
                 .addComponent(btnIngresoProductos)
-                .addGap(27, 27, 27)
-                .addComponent(btnSalidaProductos)
-                .addGap(29, 29, 29)
+                .addGap(30, 30, 30)
                 .addComponent(btnActualizacionProductos)
                 .addGap(27, 27, 27)
                 .addComponent(btnVenta)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,10 +113,6 @@ public class VistaGestionInventario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSalidaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalidaProductosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSalidaProductosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,7 +152,6 @@ public class VistaGestionInventario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizacionProductos;
     private javax.swing.JButton btnIngresoProductos;
-    private javax.swing.JButton btnSalidaProductos;
     private javax.swing.JButton btnVenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
