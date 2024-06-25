@@ -9,16 +9,15 @@ import Modelo.ModeloProducto;
 
 /**
  *
- * @author GropuNo.4
+ * @author axels
  */
-public class VistaIngresoProductos extends javax.swing.JFrame {
+public class VistaActualizacionProductos extends javax.swing.JFrame {
 
     /**
-     * Creates new form VistaIngresoProductos
+     * Creates new form VistaActualizacionProeductos
      */
-    public VistaIngresoProductos() {
+    public VistaActualizacionProductos() {
         initComponents();
-        setLocationRelativeTo(null);
         ModeloProducto modelo = new ModeloProducto(this);
         ControladorProducto controlador = new ControladorProducto(modelo);
         setControlador(controlador);
@@ -38,17 +37,18 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        ingresoNombreP = new javax.swing.JTextField();
+        ingresoNombrePAc = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        ingresoCantidadP = new javax.swing.JTextField();
+        ingresoCantidadPAc = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        ingresoCodigoP = new javax.swing.JTextField();
+        ingresoCodigoPAc = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        ingresoPrecioP = new javax.swing.JTextField();
+        ingresoPrecioPAc = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        ingresoPrecioVenta = new javax.swing.JTextField();
-        btnAgregarProducto = new javax.swing.JButton();
-        btnRegresarIP = new javax.swing.JButton();
+        ingresoPrecioVentaAc = new javax.swing.JTextField();
+        btnBuscarProducto = new javax.swing.JButton();
+        btnActualizarProducto = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -56,23 +56,23 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("INGRESO DE PRODUCTOS");
+        jLabel1.setText("ACTUALIZACIÓN DE PRODUCTOS");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(139, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(140, 140, 140))
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel1)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -97,11 +97,14 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("PRECIO DE VENTA");
 
-        btnAgregarProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnAgregarProducto.setText("AGREGAR PRODUCTO");
+        btnBuscarProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnBuscarProducto.setText("BUSCAR PRODUCTO");
 
-        btnRegresarIP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnRegresarIP.setText("REGRESAR");
+        btnActualizarProducto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnActualizarProducto.setText("ACTUALIZAR PRODUCTO");
+
+        btnRegresar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRegresar.setText("REGRESAR");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -110,54 +113,63 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
+                        .addGap(50, 50, 50)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel5)
                             .addComponent(jLabel4)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(ingresoPrecioP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
-                            .addComponent(ingresoCodigoP, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ingresoCantidadP, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAgregarProducto, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ingresoNombreP, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ingresoPrecioVenta)))
+                            .addComponent(jLabel3)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnRegresarIP)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnRegresar)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(ingresoPrecioPAc, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ingresoCodigoPAc, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ingresoCantidadPAc, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnBuscarProducto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnActualizarProducto))
+                    .addComponent(ingresoNombrePAc, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ingresoPrecioVentaAc, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(32, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(ingresoCodigoPAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(ingresoNombreP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingresoNombrePAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(ingresoCantidadP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(ingresoCodigoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(ingresoCantidadPAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(ingresoPrecioP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ingresoPrecioPAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(ingresoPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(btnAgregarProducto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(btnRegresarIP)
-                .addContainerGap())
+                    .addComponent(ingresoPrecioVentaAc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnBuscarProducto)
+                            .addComponent(btnActualizarProducto))
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRegresar)
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -201,32 +213,34 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaIngresoProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaActualizacionProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaIngresoProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaActualizacionProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaIngresoProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaActualizacionProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaIngresoProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaActualizacionProductos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaIngresoProductos().setVisible(true);
+                new VistaActualizacionProductos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAgregarProducto;
-    public javax.swing.JButton btnRegresarIP;
-    public javax.swing.JTextField ingresoCantidadP;
-    public javax.swing.JTextField ingresoCodigoP;
-    public javax.swing.JTextField ingresoNombreP;
-    public javax.swing.JTextField ingresoPrecioP;
-    public javax.swing.JTextField ingresoPrecioVenta;
+    public javax.swing.JButton btnActualizarProducto;
+    public javax.swing.JButton btnBuscarProducto;
+    public javax.swing.JButton btnRegresar;
+    public javax.swing.JTextField ingresoCantidadPAc;
+    public javax.swing.JTextField ingresoCodigoPAc;
+    public javax.swing.JTextField ingresoNombrePAc;
+    public javax.swing.JTextField ingresoPrecioPAc;
+    public javax.swing.JTextField ingresoPrecioVentaAc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -237,7 +251,6 @@ public class VistaIngresoProductos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
     public void setControlador (ControladorProducto controlador){
-        btnAgregarProducto.addActionListener(controlador);
-        btnRegresarIP.addActionListener(controlador);
+        btnRegresar.addActionListener(controlador);
     }
 }

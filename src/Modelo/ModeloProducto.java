@@ -1,6 +1,8 @@
 package Modelo;
 
+import Vista.VistaActualizacionProductos;
 import Vista.VistaIngresoProductos;
+import Vista.VistaVentas;
 
 public class ModeloProducto {
     private String nombreProducto;
@@ -9,12 +11,22 @@ public class ModeloProducto {
     private double precioProducto;
     private double precioVentaProducto;
     private VistaIngresoProductos vistaP;
+    private VistaActualizacionProductos vistaAP;
+    private VistaVentas vistaV;
 
     public ModeloProducto() {
     }
 
     public ModeloProducto(VistaIngresoProductos vistaP) {
         this.vistaP = vistaP;
+    }
+
+    public ModeloProducto(VistaActualizacionProductos vistaAP) {
+        this.vistaAP = vistaAP;
+    }
+
+    public ModeloProducto(VistaVentas vistaV) {
+        this.vistaV = vistaV;
     }
 
     public String getNombreProducto() {
@@ -63,6 +75,22 @@ public class ModeloProducto {
 
     public void setVistaP(VistaIngresoProductos vistaP) {
         this.vistaP = vistaP;
+    }
+
+    public VistaActualizacionProductos getVistaAP() {
+        return vistaAP;
+    }
+
+    public void setVistaAP(VistaActualizacionProductos vistaAP) {
+        this.vistaAP = vistaAP;
+    }
+
+    public VistaVentas getVistaV() {
+        return vistaV;
+    }
+
+    public void setVistaV(VistaVentas vistaV) {
+        this.vistaV = vistaV;
     }
     
     
