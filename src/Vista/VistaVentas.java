@@ -39,7 +39,7 @@ public class VistaVentas extends javax.swing.JFrame {
         btnAgregarProducto = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaVenta = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,7 +139,7 @@ public class VistaVentas extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaVenta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -150,7 +150,7 @@ public class VistaVentas extends javax.swing.JFrame {
                 "Nombre", "Cantidad", "Precio Unitario", "Precio Total"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaVenta);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -229,11 +229,11 @@ public class VistaVentas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarProducto;
-    private javax.swing.JButton btnRealizarVenta;
-    private javax.swing.JTextField ingresoCantidadVenta;
-    private javax.swing.JTextField ingresoCantidadVenta2;
-    private javax.swing.JTextField ingresoCodigoVenta;
+    public javax.swing.JButton btnAgregarProducto;
+    public javax.swing.JButton btnRealizarVenta;
+    public javax.swing.JTextField ingresoCantidadVenta;
+    public javax.swing.JTextField ingresoCantidadVenta2;
+    public javax.swing.JTextField ingresoCodigoVenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -242,6 +242,6 @@ public class VistaVentas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tablaVenta;
     // End of variables declaration//GEN-END:variables
 }
