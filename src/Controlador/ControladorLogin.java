@@ -6,4 +6,10 @@ package Controlador;
  */
 public class ControladorLogin {
     
+    public boolean validarUsuario(){
+        
+        boolean resultado = false;
+        
+        return resultado;
+    }  
 }
