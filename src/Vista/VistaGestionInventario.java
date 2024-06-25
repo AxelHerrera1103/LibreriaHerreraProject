@@ -1,5 +1,8 @@
 package Vista;
 
+import Controlador.ControladorGestion;
+import Modelo.ModeloGestion;
+
 /**
  *
  * @author GrupoNo.4
@@ -12,6 +15,10 @@ public class VistaGestionInventario extends javax.swing.JFrame {
     public VistaGestionInventario() {
         initComponents();
         setLocationRelativeTo(null);
+        Modelo.ModeloGestion modelo = new ModeloGestion(this);
+        Controlador.ControladorGestion controlador = new ControladorGestion(modelo);
+        setControlador(controlador);
+        
     }
 
     /**
@@ -30,7 +37,7 @@ public class VistaGestionInventario extends javax.swing.JFrame {
         btnVenta = new javax.swing.JButton();
         btnActualizacionProductos = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -150,11 +157,21 @@ public class VistaGestionInventario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActualizacionProductos;
-    private javax.swing.JButton btnIngresoProductos;
-    private javax.swing.JButton btnVenta;
+    public javax.swing.JButton btnActualizacionProductos;
+    public javax.swing.JButton btnIngresoProductos;
+    public javax.swing.JButton btnVenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    public void setControlador(ControladorGestion controlador){
+        btnIngresoProductos.addActionListener(controlador);
+        btnVenta.addActionListener(controlador);
+        btnActualizacionProductos.addActionListener(controlador);
+        
+    }
+
+
+
 }

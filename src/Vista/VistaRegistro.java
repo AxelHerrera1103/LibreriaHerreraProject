@@ -1,6 +1,9 @@
 
 package Vista;
 
+import Controlador.ControladorLogin;
+import Modelo.ModeloLogin;
+
 /**
  *
  * @author grupo No4
@@ -13,6 +16,9 @@ public class VistaRegistro extends javax.swing.JFrame {
     public VistaRegistro() {
         initComponents();
         setLocationRelativeTo(null);
+        ModeloLogin modelo = new ModeloLogin(this);
+        ControladorLogin controlador = new ControladorLogin(modelo);
+        setControlador(controlador);
     }
 
     /**
@@ -250,4 +256,10 @@ public class VistaRegistro extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
+
+    public void setControlador(ControladorLogin controlador){
+        btnRegresar.addActionListener(controlador);
+            
+    }
+
 }

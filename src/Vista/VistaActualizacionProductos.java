@@ -21,6 +21,7 @@ public class VistaActualizacionProductos extends javax.swing.JFrame {
         ModeloProducto modelo = new ModeloProducto(this);
         ControladorProducto controlador = new ControladorProducto(modelo);
         setControlador(controlador);
+        setLocationRelativeTo(null);
         
     }
 
