@@ -7,15 +7,20 @@ package Vista;
 
 import Controlador.ControladorLogin;
 import Modelo.ModeloLogin;
+import javax.swing.ImageIcon;
+
 
 public class VistaLogin extends javax.swing.JFrame {
     
     public VistaLogin() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/ramyrem.png")).getImage());
+        
         setLocationRelativeTo(null);
         Modelo.ModeloLogin modelo = new ModeloLogin(this);
         Controlador.ControladorLogin controlador = new ControladorLogin(modelo);
         setControlador(controlador);
+        controlador.abrirMenu();
     }
 
     /**
@@ -28,59 +33,69 @@ public class VistaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoPanelInicio = new javax.swing.JPanel();
-        Contraseña = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtContraseñaUsuario = new javax.swing.JPasswordField();
-        txtNombreUsuario = new javax.swing.JTextField();
-        btnIngresar = new javax.swing.JButton();
-        content = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        txtNombreUsuario = new javax.swing.JTextField();
+        txtContraseñaUsuario = new javax.swing.JPasswordField();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnIngresoMenu = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
+        setResizable(false);
         setSize(new java.awt.Dimension(1280, 720));
 
         FondoPanelInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Contraseña.setText("Contraseña");
-        FondoPanelInicio.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("CONTRASEÑA");
+        FondoPanelInicio.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, -1));
 
-        jLabel4.setText("Usuario");
-        FondoPanelInicio.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
-        FondoPanelInicio.add(txtContraseñaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 240, -1));
-        FondoPanelInicio.add(txtNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 240, -1));
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("USUARIO");
+        FondoPanelInicio.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 140, 250, -1));
 
-        btnIngresar.setText("Ingresar");
-        FondoPanelInicio.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        txtNombreUsuario.setBackground(new java.awt.Color(51, 51, 51));
+        txtNombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombreUsuario.setBorder(null);
+        FondoPanelInicio.add(txtNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 240, -1));
 
-        content.setBackground(new java.awt.Color(0, 51, 51));
+        txtContraseñaUsuario.setBackground(new java.awt.Color(51, 51, 51));
+        txtContraseñaUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtContraseñaUsuario.setBorder(null);
+        FondoPanelInicio.add(txtContraseñaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 240, -1));
 
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 980, Short.MAX_VALUE)
-        );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
-        );
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        FondoPanelInicio.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 240, 10));
 
-        FondoPanelInicio.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 980, 720));
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        FondoPanelInicio.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 240, 10));
 
-        jLabel3.setText("Iniciar Sesión");
-        FondoPanelInicio.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
+        btnIngresoMenu.setBackground(new java.awt.Color(0, 204, 204));
+        btnIngresoMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setBackground(new java.awt.Color(255, 204, 153));
-        jLabel2.setOpaque(true);
-        FondoPanelInicio.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 720));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Ingresar");
+        btnIngresoMenu.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 30));
 
-        jLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        FondoPanelInicio.add(btnIngresoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 130, 30));
+
+        jLabel1.setBackground(new java.awt.Color(102, 102, 102));
         jLabel1.setOpaque(true);
         jLabel1.setPreferredSize(new java.awt.Dimension(1280, 720));
-        FondoPanelInicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        FondoPanelInicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 980, -1));
+
+        jLabel2.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel2.setOpaque(true);
+        FondoPanelInicio.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,20 +147,23 @@ public class VistaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Contraseña;
     private javax.swing.JPanel FondoPanelInicio;
-    public javax.swing.JButton btnIngresar;
-    public javax.swing.JPanel content;
+    public javax.swing.JPanel btnIngresoMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPasswordField txtContraseñaUsuario;
     private javax.swing.JTextField txtNombreUsuario;
     // End of variables declaration//GEN-END:variables
     
     public void setControlador(ControladorLogin controlador){
-        btnIngresar.addActionListener(controlador);
+        
+        this.addWindowListener(controlador);
+        btnIngresoMenu.addMouseListener(controlador);
         
         
     }

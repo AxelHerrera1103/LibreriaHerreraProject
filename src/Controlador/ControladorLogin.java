@@ -1,25 +1,28 @@
 package Controlador;
 
 import Modelo.ModeloLogin;
-import Vista.PanelVistaProducto;
-import Vista.VistaGestionInventario;
-import Vista.VistaLogin;
-import Vista.VistaRegistro;
-import java.awt.BorderLayout;
+import Vista.VistaPrincipal;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
 
 /**
  *
  * @author GrupoNo.4
  */
-public class ControladorLogin implements ActionListener {
+public class ControladorLogin implements ActionListener, WindowListener, MouseListener {
 
     ModeloLogin modelo;
 
     public ControladorLogin(ModeloLogin modelo) {
         this.modelo = modelo;
     }
+  
 
     public boolean validarUsuario() {
 
@@ -27,47 +30,81 @@ public class ControladorLogin implements ActionListener {
 
         return resultado;
     }
+    
+    public void abrirMenu(){
 
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (modelo.getVistaRegistrar() == null) {
-            if (e.getActionCommand().equals(modelo.getVistaLogin().btnIngresar.getActionCommand())) {
-//                Vista.VistaGestionInventario vGestion = new VistaGestionInventario();
-//                vGestion.setVisible(true);
-//                modelo.getVistaLogin().dispose();
-                Vista.PanelVistaProducto vProducto = new PanelVistaProducto();
-                vProducto.setSize(980, 720);
-                vProducto.setLocation(0, 0);
-                
-                modelo.getVistaLogin().content.removeAll();
-                modelo.getVistaLogin().content.add(vProducto, BorderLayout.CENTER);
-                modelo.getVistaLogin().content.revalidate();
-                modelo.getVistaLogin().content.repaint();
-            }
-//            else if (e.getActionCommand().equals(modelo.getVistaLogin().btnRegistrarse.getActionCommand())) {
-//                Vista.VistaRegistro vRegistro = new VistaRegistro();
-//                vRegistro.setVisible(true);
-//                modelo.getVistaLogin().dispose();
-//        } 
-            
-        } else if (modelo.getVistaLogin() == null) {
-            if (e.getActionCommand().equals(modelo.getVistaRegistrar().btnRegresar.getActionCommand())) {
-                Vista.VistaLogin vLogin = new VistaLogin();
-                vLogin.setVisible(true);
-                modelo.getVistaRegistrar().dispose();
-            }
+    }
+    
+    @Override
+    public void windowOpened(WindowEvent e) {
+ 
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
+            Vista.VistaPrincipal vGestion = new VistaPrincipal();
+                vGestion.setVisible(true);
+                modelo.getVistaLogin().dispose();
         }
     }
 
-//        if(e.getActionCommand().equals(modelo.getVistaLogin().btnIngresar.getActionCommand())){
-//            Vista.VistaGestionInventario vGestion = new VistaGestionInventario();
-//            vGestion.setVisible(true);      
-//        }else if (e.getActionCommand().equals(modelo.getVistaLogin().btnRegistrarse.getActionCommand())){
-//            Vista.VistaRegistro vRegistro = new VistaRegistro();
-//            vRegistro.setVisible(true);
-//        }else if(e.getActionCommand().equals(modelo.getVistaRegistrar().btnRegresar.getActionCommand())){
-//            Vista.VistaLogin vLogin = new VistaLogin();
-//            vLogin.setVisible(true);
-//        }
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
+            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(0, 153, 153));
+        }
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
+            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(0, 204, 204));
+        }
+    }
 }

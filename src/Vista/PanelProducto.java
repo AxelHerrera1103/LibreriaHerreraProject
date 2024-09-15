@@ -8,12 +8,12 @@ package Vista;
  *
  * @author axels
  */
-public class PanelVistaProducto extends javax.swing.JPanel {
+public class PanelProducto extends javax.swing.JPanel {
 
     /**
      * Creates new form PanelVistaProducto
      */
-    public PanelVistaProducto() {
+    public PanelProducto() {
         initComponents();
     }
 

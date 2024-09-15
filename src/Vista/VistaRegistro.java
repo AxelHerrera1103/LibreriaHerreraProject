@@ -16,9 +16,9 @@ public class VistaRegistro extends javax.swing.JFrame {
     public VistaRegistro() {
         initComponents();
         setLocationRelativeTo(null);
-        ModeloLogin modelo = new ModeloLogin(this);
-        ControladorLogin controlador = new ControladorLogin(modelo);
-        setControlador(controlador);
+//        ModeloLogin modelo = new ModeloLogin(this);
+//        ControladorLogin controlador = new ControladorLogin(modelo);
+//        setControlador(controlador);
     }
 
     /**
