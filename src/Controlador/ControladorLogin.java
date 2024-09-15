@@ -97,14 +97,14 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
     @Override
     public void mouseEntered(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
-            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(0, 153, 153));
+            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(153, 153, 153));
         }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
-            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(0, 204, 204));
+            modelo.getVistaLogin().btnIngresoMenu.setBackground(new Color(102, 102, 102));
         }
     }
 }

@@ -35,13 +35,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         Fondo = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        btnIngresarUsuario = new javax.swing.JPanel();
+        btnCerrarSesion = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        btnAgregarUsuario = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         btnInformes = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         btnActualizacionProductos = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btnIngresoProductos = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnVenta = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         fondoMenu = new javax.swing.JLabel();
         contenedor = new javax.swing.JPanel();
         contenedor2 = new javax.swing.JPanel();
@@ -51,70 +56,81 @@ public class VistaPrincipal extends javax.swing.JFrame {
 
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Corbel Light", 0, 30)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Menú");
-        Fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("MENÚ");
+        Fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 60));
 
-        btnIngresarUsuario.setBackground(new java.awt.Color(102, 102, 0));
+        btnCerrarSesion.setBackground(new java.awt.Color(51, 51, 51));
+        btnCerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout btnIngresarUsuarioLayout = new javax.swing.GroupLayout(btnIngresarUsuario);
-        btnIngresarUsuario.setLayout(btnIngresarUsuarioLayout);
-        btnIngresarUsuarioLayout.setHorizontalGroup(
-            btnIngresarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        btnIngresarUsuarioLayout.setVerticalGroup(
-            btnIngresarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
+        jLabel7.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("CERRAR SESIÓN");
+        btnCerrarSesion.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
-        Fondo.add(btnIngresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 300, 40));
+        Fondo.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 680, 300, 40));
 
-        btnInformes.setBackground(new java.awt.Color(153, 204, 255));
+        btnAgregarUsuario.setBackground(new java.awt.Color(51, 51, 51));
+        btnAgregarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregarUsuario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout btnInformesLayout = new javax.swing.GroupLayout(btnInformes);
-        btnInformes.setLayout(btnInformesLayout);
-        btnInformesLayout.setHorizontalGroup(
-            btnInformesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        btnInformesLayout.setVerticalGroup(
-            btnInformesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
+        jLabel5.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("AGREGAR USUARIO");
+        jLabel5.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        btnAgregarUsuario.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
+
+        Fondo.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 300, 40));
+
+        btnInformes.setBackground(new java.awt.Color(51, 51, 51));
+        btnInformes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInformes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("REALIZAR INFORME");
+        jLabel4.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        btnInformes.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
         Fondo.add(btnInformes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, 40));
 
-        btnActualizacionProductos.setBackground(new java.awt.Color(102, 102, 0));
+        btnActualizacionProductos.setBackground(new java.awt.Color(51, 51, 51));
+        btnActualizacionProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActualizacionProductos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("Actualizar Producto");
+        jLabel3.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("ACTUALIZAR PRODUCTO");
+        jLabel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
         btnActualizacionProductos.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
         Fondo.add(btnActualizacionProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 40));
 
-        btnIngresoProductos.setBackground(new java.awt.Color(153, 204, 255));
+        btnIngresoProductos.setBackground(new java.awt.Color(51, 51, 51));
+        btnIngresoProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngresoProductos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Ingresar Producto");
+        jLabel1.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("INGRESAR PRODUCTO");
+        jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
         btnIngresoProductos.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
         Fondo.add(btnIngresoProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 300, 40));
 
-        btnVenta.setBackground(new java.awt.Color(102, 102, 0));
+        btnVenta.setBackground(new java.awt.Color(51, 51, 51));
+        btnVenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVenta.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout btnVentaLayout = new javax.swing.GroupLayout(btnVenta);
-        btnVenta.setLayout(btnVentaLayout);
-        btnVentaLayout.setHorizontalGroup(
-            btnVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-        btnVentaLayout.setVerticalGroup(
-            btnVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
+        jLabel6.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("REALIZAR UNA VENTA");
+        jLabel6.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        btnVenta.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
         Fondo.add(btnVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 40));
 
@@ -123,7 +139,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         fondoMenu.setPreferredSize(new java.awt.Dimension(300, 720));
         Fondo.add(fondoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        contenedor.setBackground(new java.awt.Color(102, 102, 102));
+        contenedor.setBackground(new java.awt.Color(79, 109, 122));
 
         javax.swing.GroupLayout contenedorLayout = new javax.swing.GroupLayout(contenedor);
         contenedor.setLayout(contenedorLayout);
@@ -206,16 +222,21 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
     public javax.swing.JPanel btnActualizacionProductos;
-    private javax.swing.JPanel btnInformes;
-    private javax.swing.JPanel btnIngresarUsuario;
+    public javax.swing.JPanel btnAgregarUsuario;
+    public javax.swing.JPanel btnCerrarSesion;
+    public javax.swing.JPanel btnInformes;
     public javax.swing.JPanel btnIngresoProductos;
-    private javax.swing.JPanel btnVenta;
+    public javax.swing.JPanel btnVenta;
     public javax.swing.JPanel contenedor;
     public javax.swing.JPanel contenedor2;
     private javax.swing.JLabel fondoMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 
     public void setControlador(ControladorMenu controlador){
@@ -225,6 +246,10 @@ public class VistaPrincipal extends javax.swing.JFrame {
         this.addWindowListener(controlador);
         btnIngresoProductos.addMouseListener(controlador);
         btnActualizacionProductos.addMouseListener(controlador);
+        btnVenta.addMouseListener(controlador);
+        btnInformes.addMouseListener(controlador);
+        btnAgregarUsuario.addMouseListener(controlador);
+        btnCerrarSesion.addMouseListener(controlador);
         
     }
     

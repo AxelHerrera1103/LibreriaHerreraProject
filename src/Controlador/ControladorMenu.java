@@ -7,6 +7,7 @@ import Modelo.ModeloMenu;
 import Vista.PanelActualizacionProducto;
 
 import Vista.PanelProducto;
+import Vista.VistaLogin;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -90,6 +91,10 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
             Vista.PanelActualizacionProducto vPanelA = new PanelActualizacionProducto();
             MostrarPanel(vPanelA);
            
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnCerrarSesion)){
+            Vista.VistaLogin vLogin = new VistaLogin();
+            vLogin.setVisible(true);
+            modelo.getVistaPrincipal().dispose();
         }
     }
 
@@ -106,14 +111,34 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
     @Override
     public void mouseEntered(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaPrincipal().btnIngresoProductos)){
-            modelo.getVistaPrincipal().btnIngresoProductos.setBackground(new Color(153, 255, 255));
+            modelo.getVistaPrincipal().btnIngresoProductos.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnVenta)){
+            modelo.getVistaPrincipal().btnVenta.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnActualizacionProductos)){
+            modelo.getVistaPrincipal().btnActualizacionProductos.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnInformes)){
+            modelo.getVistaPrincipal().btnInformes.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnAgregarUsuario)){
+            modelo.getVistaPrincipal().btnAgregarUsuario.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnCerrarSesion)){
+            modelo.getVistaPrincipal().btnCerrarSesion.setBackground(new Color(102, 102, 102));
         }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaPrincipal().btnIngresoProductos)){
-            modelo.getVistaPrincipal().btnIngresoProductos.setBackground(new Color(153, 204, 255));
+            modelo.getVistaPrincipal().btnIngresoProductos.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnVenta)){
+            modelo.getVistaPrincipal().btnVenta.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnActualizacionProductos)){
+            modelo.getVistaPrincipal().btnActualizacionProductos.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnInformes)){
+            modelo.getVistaPrincipal().btnInformes.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnAgregarUsuario)){
+            modelo.getVistaPrincipal().btnAgregarUsuario.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnCerrarSesion)){
+            modelo.getVistaPrincipal().btnCerrarSesion.setBackground(new Color(51, 51, 51));
         }
     }
     

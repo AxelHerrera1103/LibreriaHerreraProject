@@ -8,12 +8,12 @@ package Vista;
  *
  * @author axels
  */
-public class PanelProducto extends javax.swing.JPanel {
+public class PanelVenta extends javax.swing.JPanel {
 
     /**
-     * Creates new form PanelVistaProducto
+     * Creates new form PanelVenta
      */
-    public PanelProducto() {
+    public PanelVenta() {
         initComponents();
     }
 
@@ -29,13 +29,9 @@ public class PanelProducto extends javax.swing.JPanel {
         FondoPanel = new javax.swing.JPanel();
         Fondo = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
-        setForeground(new java.awt.Color(255, 255, 255));
-
         FondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Fondo.setBackground(new java.awt.Color(79, 109, 122));
-        Fondo.setForeground(new java.awt.Color(102, 102, 102));
+        Fondo.setBackground(new java.awt.Color(102, 102, 102));
         Fondo.setOpaque(true);
         FondoPanel.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 720));
 

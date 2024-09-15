@@ -16,6 +16,7 @@ public class VistaLogin extends javax.swing.JFrame {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/ramyrem.png")).getImage());
         
+        
         setLocationRelativeTo(null);
         Modelo.ModeloLogin modelo = new ModeloLogin(this);
         Controlador.ControladorLogin controlador = new ControladorLogin(modelo);
@@ -33,14 +34,15 @@ public class VistaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoPanelInicio = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        letTituloVentana = new javax.swing.JLabel();
+        letContraseña = new javax.swing.JLabel();
+        letUsuario = new javax.swing.JLabel();
         txtNombreUsuario = new javax.swing.JTextField();
         txtContraseñaUsuario = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator1 = new javax.swing.JSeparator();
         btnIngresoMenu = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        letBotonIniciarSesion = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -50,17 +52,23 @@ public class VistaLogin extends javax.swing.JFrame {
 
         FondoPanelInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CONTRASEÑA");
-        FondoPanelInicio.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, -1));
+        letTituloVentana.setFont(new java.awt.Font("Corbel Light", 0, 30)); // NOI18N
+        letTituloVentana.setForeground(new java.awt.Color(255, 255, 255));
+        letTituloVentana.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letTituloVentana.setText("INICIO DE SESIÓN");
+        FondoPanelInicio.add(letTituloVentana, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 60));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("USUARIO");
-        FondoPanelInicio.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 140, 250, -1));
+        letContraseña.setBackground(new java.awt.Color(255, 255, 255));
+        letContraseña.setFont(new java.awt.Font("Corbel Light", 0, 14)); // NOI18N
+        letContraseña.setForeground(new java.awt.Color(255, 255, 255));
+        letContraseña.setText("CONTRASEÑA");
+        FondoPanelInicio.add(letContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 250, -1));
+
+        letUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        letUsuario.setFont(new java.awt.Font("Corbel Light", 0, 14)); // NOI18N
+        letUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        letUsuario.setText("USUARIO");
+        FondoPanelInicio.add(letUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 250, -1));
 
         txtNombreUsuario.setBackground(new java.awt.Color(51, 51, 51));
         txtNombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -78,17 +86,19 @@ public class VistaLogin extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         FondoPanelInicio.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 240, 10));
 
-        btnIngresoMenu.setBackground(new java.awt.Color(0, 204, 204));
+        btnIngresoMenu.setBackground(new java.awt.Color(102, 102, 102));
+        btnIngresoMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngresoMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Ingresar");
-        btnIngresoMenu.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 30));
+        letBotonIniciarSesion.setFont(new java.awt.Font("Corbel Light", 0, 14)); // NOI18N
+        letBotonIniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        letBotonIniciarSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letBotonIniciarSesion.setText("INICIAR SESIÓN");
+        btnIngresoMenu.add(letBotonIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 130, 25));
 
-        FondoPanelInicio.add(btnIngresoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 130, 30));
+        FondoPanelInicio.add(btnIngresoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 130, 40));
 
-        jLabel1.setBackground(new java.awt.Color(102, 102, 102));
+        jLabel1.setBackground(new java.awt.Color(79, 109, 122));
         jLabel1.setOpaque(true);
         jLabel1.setPreferredSize(new java.awt.Dimension(1280, 720));
         FondoPanelInicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 980, -1));
@@ -151,11 +161,12 @@ public class VistaLogin extends javax.swing.JFrame {
     public javax.swing.JPanel btnIngresoMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel letBotonIniciarSesion;
+    private javax.swing.JLabel letContraseña;
+    private javax.swing.JLabel letTituloVentana;
+    private javax.swing.JLabel letUsuario;
     private javax.swing.JPasswordField txtContraseñaUsuario;
     private javax.swing.JTextField txtNombreUsuario;
     // End of variables declaration//GEN-END:variables
