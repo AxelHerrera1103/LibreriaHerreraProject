@@ -47,6 +47,8 @@ public class VistaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnVenta = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        btnAgregarEmpleado = new javax.swing.JPanel();
+        letAgregarEmpleado = new javax.swing.JLabel();
         fondoMenu = new javax.swing.JLabel();
         contenedor = new javax.swing.JPanel();
         contenedor2 = new javax.swing.JPanel();
@@ -133,6 +135,18 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btnVenta.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
 
         Fondo.add(btnVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 300, 40));
+
+        btnAgregarEmpleado.setBackground(new java.awt.Color(51, 51, 51));
+        btnAgregarEmpleado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregarEmpleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        letAgregarEmpleado.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        letAgregarEmpleado.setForeground(new java.awt.Color(255, 255, 255));
+        letAgregarEmpleado.setText("AGREGAR EMPLEADO");
+        letAgregarEmpleado.setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        btnAgregarEmpleado.add(letAgregarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 40));
+
+        Fondo.add(btnAgregarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 300, 40));
 
         fondoMenu.setBackground(new java.awt.Color(51, 51, 51));
         fondoMenu.setOpaque(true);
@@ -222,6 +236,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
     public javax.swing.JPanel btnActualizacionProductos;
+    public javax.swing.JPanel btnAgregarEmpleado;
     public javax.swing.JPanel btnAgregarUsuario;
     public javax.swing.JPanel btnCerrarSesion;
     public javax.swing.JPanel btnInformes;
@@ -237,6 +252,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel letAgregarEmpleado;
     // End of variables declaration//GEN-END:variables
 
     public void setControlador(ControladorMenu controlador){
@@ -250,6 +266,7 @@ public class VistaPrincipal extends javax.swing.JFrame {
         btnInformes.addMouseListener(controlador);
         btnAgregarUsuario.addMouseListener(controlador);
         btnCerrarSesion.addMouseListener(controlador);
+        btnAgregarEmpleado.addMouseListener(controlador);
         
     }
     

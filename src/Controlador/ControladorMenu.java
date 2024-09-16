@@ -122,6 +122,8 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
             modelo.getVistaPrincipal().btnAgregarUsuario.setBackground(new Color(102, 102, 102));
         }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnCerrarSesion)){
             modelo.getVistaPrincipal().btnCerrarSesion.setBackground(new Color(102, 102, 102));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnAgregarEmpleado)){
+            modelo.getVistaPrincipal().btnAgregarEmpleado.setBackground(new Color(102, 102, 102));
         }
     }
 
@@ -139,6 +141,8 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
             modelo.getVistaPrincipal().btnAgregarUsuario.setBackground(new Color(51, 51, 51));
         }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnCerrarSesion)){
             modelo.getVistaPrincipal().btnCerrarSesion.setBackground(new Color(51, 51, 51));
+        }else if(e.getComponent().equals(modelo.getVistaPrincipal().btnAgregarEmpleado)){
+            modelo.getVistaPrincipal().btnAgregarEmpleado.setBackground(new Color(51, 51, 51));
         }
     }
     

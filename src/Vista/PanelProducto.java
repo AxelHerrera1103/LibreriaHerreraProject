@@ -27,12 +27,45 @@ public class PanelProducto extends javax.swing.JPanel {
     private void initComponents() {
 
         FondoPanel = new javax.swing.JPanel();
+        txtNombreProducto = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        letNombreProducto = new javax.swing.JLabel();
+        letTitulo = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setForeground(new java.awt.Color(255, 255, 255));
 
         FondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtNombreProducto.setBackground(new java.awt.Color(102, 102, 102));
+        txtNombreProducto.setForeground(new java.awt.Color(255, 255, 255));
+        txtNombreProducto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 2));
+        FondoPanel.add(txtNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 280, 30));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 240, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        FondoPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 660, 240, 40));
+
+        letNombreProducto.setFont(new java.awt.Font("Corbel Light", 0, 18)); // NOI18N
+        letNombreProducto.setForeground(new java.awt.Color(255, 255, 255));
+        letNombreProducto.setText("NOMBRE PRODUCTO");
+        FondoPanel.add(letNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+
+        letTitulo.setFont(new java.awt.Font("Corbel Light", 0, 36)); // NOI18N
+        letTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        letTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        letTitulo.setText("INGRESAR PRODUCTO");
+        FondoPanel.add(letTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         Fondo.setBackground(new java.awt.Color(79, 109, 122));
         Fondo.setForeground(new java.awt.Color(102, 102, 102));
@@ -55,5 +88,9 @@ public class PanelProducto extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
     private javax.swing.JPanel FondoPanel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel letNombreProducto;
+    private javax.swing.JLabel letTitulo;
+    private javax.swing.JTextField txtNombreProducto;
     // End of variables declaration//GEN-END:variables
 }
