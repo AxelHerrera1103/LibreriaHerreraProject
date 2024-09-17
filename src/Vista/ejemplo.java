@@ -30,11 +30,11 @@ public class ejemplo extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 518, Short.MAX_VALUE)
+            .addGap(0, 661, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 347, Short.MAX_VALUE)
+            .addGap(0, 292, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
