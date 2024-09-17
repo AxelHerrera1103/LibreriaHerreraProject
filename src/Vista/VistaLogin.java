@@ -167,8 +167,8 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel letContraseña;
     private javax.swing.JLabel letTituloVentana;
     private javax.swing.JLabel letUsuario;
-    private javax.swing.JPasswordField txtContraseñaUsuario;
-    private javax.swing.JTextField txtNombreUsuario;
+    public javax.swing.JPasswordField txtContraseñaUsuario;
+    public javax.swing.JTextField txtNombreUsuario;
     // End of variables declaration//GEN-END:variables
     
     public void setControlador(ControladorLogin controlador){

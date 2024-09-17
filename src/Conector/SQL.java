@@ -141,4 +141,11 @@ public class SQL {
         return CONSULTA_TELEFONO_ID;
     }
     
+    //usuarios
+    private final String CONSULTA_USUARIO = "SELECT usuario, contraseña, id_tipo_usuario FROM usuarios WHERE usuario = ? AND contraseña = ?";
+
+    public String getCONSULTA_USUARIO() {
+        return CONSULTA_USUARIO;
+    }
+    
 }

@@ -11,9 +11,9 @@ public class Conector {
     
     private static final String CLASE = "com.mysql.jdbc.Driver";
     private final String HOST = "sql.freedb.tech";
-    private final String USUARIO = "freedb_axelintecap";
-    private final String CLAVE = "P@xyY5GfdB8Ssa!";
-    private final String BASEDATOS = "freedb_JardineriaIntecap";
+    private final String USUARIO = "freedb_grupo4intecap";
+    private final String CLAVE = "M?bH3aY?2ZS28eU";
+    private final String BASEDATOS = "freedb_db_grupo4";
     private final String URL;
     
     private Connection link;
@@ -28,6 +28,7 @@ public class Conector {
         try {
             Class.forName(CLASE).getDeclaredConstructor().newInstance();
             this.link = DriverManager.getConnection(this.URL, this.USUARIO,this.CLAVE);
+            
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | SQLException ex) {
             System.out.println(ex.getMessage());
         }

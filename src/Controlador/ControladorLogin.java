@@ -1,5 +1,6 @@
 package Controlador;
 
+import Implementacion.LoginImp;
 import Modelo.ModeloLogin;
 import Vista.VistaPrincipal;
 import java.awt.Color;
@@ -18,6 +19,7 @@ import java.awt.event.WindowListener;
 public class ControladorLogin implements ActionListener, WindowListener, MouseListener {
 
     ModeloLogin modelo;
+    LoginImp implementacion = new LoginImp();
 
     public ControladorLogin(ModeloLogin modelo) {
         this.modelo = modelo;
@@ -78,9 +80,20 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
     @Override
     public void mouseClicked(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
-            Vista.VistaPrincipal vGestion = new VistaPrincipal();
+            
+            ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
+            String usuarioausar = "admin";
+            String contrasenaaUsar = "1234";
+            if(
+                    (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
+                    ){
+                Vista.VistaPrincipal vGestion = new VistaPrincipal();
                 vGestion.setVisible(true);
                 modelo.getVistaLogin().dispose();
+            }else{
+                System.out.println("No entro");
+            }
+            
         }
     }
 
