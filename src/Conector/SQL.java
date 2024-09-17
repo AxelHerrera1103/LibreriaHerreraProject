@@ -68,13 +68,41 @@ public class SQL {
     public String getACTUALIZAR_VENTA() {
         return ACTUALIZAR_VENTA;
     }
-// Registro 
+    // REGISTRO USUARIO CREO 
+    //  empleado
+    
+    private final String CONSULTA_EMPLEADOS = "SELECT * FROM empleado";
+    private final String CONSULTA_EMPLEADO_ID = "DELETE FROM empleado WHERE id_empleado = ?";
+    /*
+    private final String INSERTAR_EMPLEADO = "INSERT INTO empleado (nombre_empleado, apellido_empleado, id_telefono_empleado, id_puesto_empleado) VALUES (?, ?, ?, ?)" ; 
+    private final String ELIMINAR_EMPLEADO = "DELETE FROM empleado WHERE id_empleado";
+    private final String ACTUALIZAR_EMPLEADO = "UPDATE empleado SET nombre_empleado = ?, apellido_empleado = ?, id_telefono_empleado = ?, id_puesto_empleado = ? WHERE id_empleado = ?";
+
+    public String getINSERTAR_EMPLEADO() {
+        return INSERTAR_EMPLEADO;
+    }
+
+    public String getELIMINAR_EMPLEADO() {
+        return ELIMINAR_EMPLEADO;
+    }
+
+    public String getACTUALIZAR_EMPLEADO() {
+        return ACTUALIZAR_EMPLEADO;
+    }
+    POR SI ACASO
+    */
+    public String getCONSULTA_EMPLEADOS() {
+        return CONSULTA_EMPLEADOS;
+    }
+
+    public String getCONSULTA_EMPLEADO_ID() {
+        return CONSULTA_EMPLEADO_ID;
+    }
+    
+//PUESTOS 
      private final String CONSULTA_PUESTOS = "SELECT * FROM puestoEmpleado";
     private final String CONSULTA_PUESTO_ID = "SELECT * FROM puestoEmpleado WHERE id_puesto_empleado = ?";
-    private final String INSERTAR_PUESTO = "INSERT INTO puestoEmpleado (puesto_Empleado) VALUES (?)";
-    private final String ELIMINAR_PUESTO = "DELETE FROM puestoEmpleado WHERE id_puesto_empleado = ?";
-    private final String ACTUALIZAR_PUESTO = "UPDATE puestoEmpleado SET puesto_Empleado = ? WHERE id_puesto_empleado = ?";
-
+   
     public String getCONSULTA_PUESTOS() {
         return CONSULTA_PUESTOS;
     }
@@ -83,7 +111,7 @@ public class SQL {
         return CONSULTA_PUESTO_ID;
     }
 
-    public String getINSERTAR_PUESTO() {
+   /* public String getINSERTAR_PUESTO() {
         return INSERTAR_PUESTO;
     }
 
@@ -94,17 +122,13 @@ public class SQL {
     public String getACTUALIZAR_PUESTO() {
         return ACTUALIZAR_PUESTO;
     }
-    //  empleado
-    private final String CONSULTA_EMPLEADOS = "SELECT * FROM empleado";
-    private final String CONSULTA_EMPLEADO_ID = "SELECT * FROM empleado WHERE id_empleado = ?";
+     private final String INSERTAR_PUESTO = "INSERT INTO puestoEmpleado (puesto_Empleado) VALUES (?)";
+    private final String ELIMINAR_PUESTO = "DELETE FROM puestoEmpleado WHERE id_puesto_empleado = ?";
+    private final String ACTUALIZAR_PUESTO = "UPDATE puestoEmpleado SET puesto_Empleado = ? WHERE id_puesto_empleado = ?";
 
-    public String getCONSULTA_EMPLEADOS() {
-        return CONSULTA_EMPLEADOS;
-    }
-
-    public String getCONSULTA_EMPLEADO_ID() {
-        return CONSULTA_EMPLEADO_ID;
-    }
+    por si acaso se necesita 
+*/ 
+    
     // telefono
     private final String CONSULTA_TELEFONOS = "SELECT * FROM telefonoEmpleado";
     private final String CONSULTA_TELEFONO_ID = "SELECT * FROM telefonoEmpleado WHERE id_telefono_empleado = ?";
