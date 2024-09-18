@@ -21,6 +21,13 @@ import javax.swing.JPanel;
 public class ControladorMenu implements ActionListener, WindowListener, MouseListener {
     
     ModeloMenu modelo;
+//    private int tipoUsuario;
+//    
+//    public void setTipoUsuario(int tipoUsuario) {
+//        this.tipoUsuario = tipoUsuario;
+//        
+//    }
+//    
 
     public  ControladorMenu(ModeloMenu modelo) {
         this.modelo = modelo;
@@ -36,7 +43,6 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
             modelo.getVistaPrincipal().contenedor.repaint();
     }
     
-    
     @Override
     public void actionPerformed(ActionEvent e) {
 //        if(e.getActionCommand().equals(modelo.getVistaGestion().btnIngresoProductos.getActionCommand())){
@@ -48,7 +54,20 @@ public class ControladorMenu implements ActionListener, WindowListener, MouseLis
 
     @Override
     public void windowOpened(WindowEvent e) {
-        
+        System.out.println(modelo.getTipoUsuario());
+        if(modelo.getTipoUsuario() == 1){
+            modelo.getVistaPrincipal().btnActualizacionProductos.setVisible(true);
+            modelo.getVistaPrincipal().btnAgregarEmpleado.setVisible(true);
+            modelo.getVistaPrincipal().btnAgregarUsuario.setVisible(true);
+            modelo.getVistaPrincipal().btnInformes.setVisible(true);
+            modelo.getVistaPrincipal().btnIngresoProductos.setVisible(true);
+        }else if(modelo.getTipoUsuario() == 2){
+            modelo.getVistaPrincipal().btnActualizacionProductos.setVisible(false);
+            modelo.getVistaPrincipal().btnAgregarEmpleado.setVisible(false);
+            modelo.getVistaPrincipal().btnAgregarUsuario.setVisible(false);
+            modelo.getVistaPrincipal().btnInformes.setVisible(false);
+            modelo.getVistaPrincipal().btnIngresoProductos.setVisible(false);
+        }
     }
 
     @Override

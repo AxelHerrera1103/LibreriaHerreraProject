@@ -2,6 +2,7 @@ package Controlador;
 
 import Implementacion.LoginImp;
 import Modelo.ModeloLogin;
+import Modelo.ModeloMenu;
 import Vista.VistaPrincipal;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -82,12 +83,14 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
         if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
             
             ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
-            String usuarioausar = "admin";
-            String contrasenaaUsar = "1234";
+//            String usuarioausar = "admin";
+//            String contrasenaaUsar = "1234";
+            ModeloMenu modMenu = new ModeloMenu();
             if(
                     (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
                     ){
                 Vista.VistaPrincipal vGestion = new VistaPrincipal();
+                modMenu.setTipoUsuario(model.getIdTipoUsuario());
                 vGestion.setVisible(true);
                 modelo.getVistaLogin().dispose();
             }else{
