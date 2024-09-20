@@ -21,7 +21,6 @@ public class VistaLogin extends javax.swing.JFrame {
         Modelo.ModeloLogin modelo = new ModeloLogin(this);
         Controlador.ControladorLogin controlador = new ControladorLogin(modelo);
         setControlador(controlador);
-        controlador.abrirMenu();
     }
 
     /**
@@ -175,7 +174,7 @@ public class VistaLogin extends javax.swing.JFrame {
         
         this.addWindowListener(controlador);
         btnIngresoMenu.addMouseListener(controlador);
-        
+        btnIngresoMenu.addKeyListener(controlador);
         
     }
 
