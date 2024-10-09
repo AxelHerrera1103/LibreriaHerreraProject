@@ -40,6 +40,22 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
         modelo.getVistaLogin().btnIngresoMenu.getKeyListeners();
     }
     
+    public void Ingresar(){
+        ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
+
+            ModeloMenu modMenu = new ModeloMenu();
+            if(
+                    (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
+                    ){
+                Vista.VistaPrincipal vGestion = new VistaPrincipal();
+                modMenu.setTipoUsuario(model.getIdTipoUsuario());
+                vGestion.setVisible(true);
+                modelo.getVistaLogin().dispose();
+            }else{
+                System.out.println("No entro");
+            }
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -83,21 +99,21 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
     @Override
     public void mouseClicked(MouseEvent e) {
         if(e.getComponent().equals(modelo.getVistaLogin().btnIngresoMenu)){
-            
-            ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
-
-            ModeloMenu modMenu = new ModeloMenu();
-            if(
-                    (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
-                    ){
-                Vista.VistaPrincipal vGestion = new VistaPrincipal();
-                modMenu.setTipoUsuario(model.getIdTipoUsuario());
-                vGestion.setVisible(true);
-                modelo.getVistaLogin().dispose();
-            }else{
-                System.out.println("No entro");
-            }
-            
+//            
+//            ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
+//
+//            ModeloMenu modMenu = new ModeloMenu();
+//            if(
+//                    (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
+//                    ){
+//                Vista.VistaPrincipal vGestion = new VistaPrincipal();
+//                modMenu.setTipoUsuario(model.getIdTipoUsuario());
+//                vGestion.setVisible(true);
+//                modelo.getVistaLogin().dispose();
+//            }else{
+//                System.out.println("No entro");
+//            }
+            Ingresar();
         }
     }
 
@@ -133,22 +149,7 @@ public class ControladorLogin implements ActionListener, WindowListener, MouseLi
     @Override
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == KeyEvent.VK_ENTER){
-            
-            System.out.println(e.getKeyCode());
-            ModeloLogin model = implementacion.consultarUsuario(modelo.getVistaLogin().txtNombreUsuario.getText(), String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()));
-
-            ModeloMenu modMenu = new ModeloMenu();
-            if(
-                    (modelo.getVistaLogin().txtNombreUsuario.getText().equals(model.getUsuario())) && (String.valueOf(modelo.getVistaLogin().txtContraseñaUsuario.getPassword()).equals(model.getContrasenia()))
-                    ){
-                Vista.VistaPrincipal vGestion = new VistaPrincipal();
-                modMenu.setTipoUsuario(model.getIdTipoUsuario());
-                vGestion.setVisible(true);
-                modelo.getVistaLogin().dispose();
-            }else{
-                System.out.println("No entro");
-            }
-        
+            Ingresar();
         }
     }
 

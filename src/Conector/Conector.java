@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 public class Conector {
     
     private static final String CLASE = "com.mysql.jdbc.Driver";
-    private final String HOST = "sql.freedb.tech";
-    private final String USUARIO = "freedb_grupo4intecap";
-    private final String CLAVE = "M?bH3aY?2ZS28eU";
-    private final String BASEDATOS = "freedb_db_grupo4";
+    private final String HOST = "127.0.0.1";
+    private final String USUARIO = "root";
+    private final String CLAVE = "Elperrito2947,++";
+    private final String BASEDATOS = "db_grupo4local";
     private final String URL;
     
     private Connection link;
